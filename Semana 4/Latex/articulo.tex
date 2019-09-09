@@ -1,12 +1,35 @@
-\documentclass[a4paper. 12pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}  %acentos  sin código
+\usepackage[spanish]{babel} %español 
+\usepackage{amssymb, amsmath, amsbsy} %para fracciones
 
 \begin{document}
 \section{Introducción}
-  Ejemplo en LATEX. 
-La variable $x$, y la formula \( y = m x + c \).
+ Ejemplo en LATEX. 
 
+La variable $x$, y la formula \( y = m x + c \) ó $y^2=mx_i+c$
+
+Llaves \{0,1,0,2\}  \\ %salto de línea
+Acento: \'e \'i \'o \\
+Signo de peso: \$ \\
+Guión bajo: \_ \\
+Guión medio: \- \\
+Barra invertida: \verb'\' \\
+Bara inclinada: / \\
+Equivalencia: \verb'~' \\
+Numeral: \verb'#' \\
+Fracción en LaTex: $\frac{1}{x}$,   $\frac{1}{2}$ \\
+Alpha: $\alpha$\\
+Matriz:
+$$
+Ow = \bordermatrix{
+              & dt_1     & dt_2     & \cdots & dt_n     \cr
+    do_1     & {w_{1,1}}    & {w_{1,2}}     & \ldots & {w_{1,n}}    \cr
+    do_2     & {w_{2,1}}     & {w_{2,2}}     & \ldots & {w_{2,n}}     \cr
+    \vdots & \vdots & \vdots & \ddots & \vdots \cr
+    do_m     & {w_{m,1}}    & {w_{m,2}}      & \ldots  & {w_{m,n}}      \cr
+}
+$$
 \end{document}
 
 
