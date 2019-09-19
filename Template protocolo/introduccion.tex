@@ -1,0 +1,66 @@
+\section{Introducción}
+
+\subsection{Antecedentes}
+Los Sistema Colaborativos son sistemas que apoyan a equipos de personas a realizar actividades colaborativas para alcanzar una meta en común. Estos sistemas se ven apoyados por el área de Visualización de Información (VI) para mostrar a los equipos información gráfica que derive de datos generados a partir de las interacciones de los usuarios con el entorno. Esta representación visual de datos podría apoyar la generación de una consciencia de grupo que pueda ser clave para la toma de decisiones de los integrantes de equipos durante el desarrollo de una actividad colaborativa.
+
+\subsubsection{Sistemas colaborativos}
+Los Sistemas Colaborativos (SC) o Groupware derivan del campo de estudio Trabajo Colaborativo Asistido por Computadora (CSCW, por sus siglas en inglés), el cual se enfoca en el estudio de grupos de trabajo y busca descubrir cómo el cómputo puede apoyarlos. Como área de estudio interdisciplinaria, CSCW involucra ciencias sociales (p.ej.psicología, sociología, teoría organizacional, antropología, entre otras) y ciencias de la computación (p.ej. inteligencia artificial, sistemas distribuidos, diseño de interfaz de usuario y usabilidad) \cite{Mills2003a}. En el área de cómputo destacan los SC, son sistemas basados en computadora que soportan grupos de gente comprometidos en una tarea común (o meta) y que proveen una interfaz para un ambiente compartido \cite{Clarence1991a}.
+
+Los SC consideran los aspectos sociales, pero están más enfocados en los computacionales: el espacio, tiempo, cantidad de usuarios, entre otros, son interpretados como dimensiones que heredan de los CSCW. Estas dimensiones deben tomarse en cuenta para el diseño de los SC en aspectos de comunicación, coordinación e interacción de usuarios, entre otros, que varían sus características según la dimensión que sea más relevante en el SC (p.ej. un SC con comunicación a distancia). 
+
+\subsubsection{Desempeño de equipos}
+El aspecto de interacción de usuarios se ocupa de construir y mantener la relación entre los usuarios del SC, administrando la atención o consciencia de las tareas y actividades de un usuario hacia otros; para esto, hace uso de la coordinación y la comunicación \cite{Mills2003a}. A través de la consciencia o \textit{awareness}, se ha medido el desempeño de equipos (p.ej. presencia social) \cite{Montane-Jimenez2015a}.
+
+La conceptualización de consciencia puede orientarse a la interacción entre personas, a la  percepción del tiempo y espacio o al nivel de la información y clasificarse en diversas categorías (\cite{Herreraa}, \cite{Mills2003a}, \cite{Somervell2003}, \cite{Prasolova-Forland2003}, \cite{Daassi2007}, \cite{Antunes2014a}). Entre estas categorías existe la social (también conocida como \textit{social awareness}), sobre ella se ha estudiado la presencia social \cite{JIMENEZ2017} como mecanismo de medida para el desempeño de equipos, esta mide el grado de relevancia de usuarios mientras realizan una actividad colaborativa, considerando que el conjunto de actividades son parte de objetivos y a estos como parte de metas del SC, así mismo, se ha evaluado que hay cambios positivos en la toma de decisiones cuando los integrantes de un equipo pueden observar su desempeño (p.ej. presencia social) con respecto al de sus compañeros.
+
+Así como la presencia social, la consciencia orientada a la interacción entre personas (\textit{social awareness}), también contempla el acceso a la información sobre cada uno de los integrantes de un equipo, su ubicación, sus acciones, sus intenciones y la historia de su interacción \cite{Herrera2013a}, sobre los que pudiera haber más estudios de medidas o indicadores de desempeño.
+
+\subsubsection{Visualización de desempeño de equipos en sistemas colaborativos}
+
+Establecer medidas para evaluar el desempeño de equipos ha sido un reto importante, sin embargo, una vez obtenida esta medida se afronta el reto para decidir qué técnica de visualización utiliar para mostrarla al equipo y apoyar la toma de decisiones. 
+
+Las técnicas de visualización, provenientes del estudio de Visualización de Información (VI), son representaciones interactivas de datos abstractos que permiten la adquisición de conocimientos (proceso cognitivo) y su propósito es la rápida asimilación de información \cite{Card1999}.
+
+
+
+\subsection{Definición del problema}
+
+Un grupo trabaja a través de una computadora (p.ej. un vidojuego de rol, un editor de textos, un diagramador de clases) para ejecutar actividades que les permitirán lograr una meta en común (p.ej. derrotar un enemigo poderoso para obtener objetos raros, escribir capítulos de un libro, elaborar el diagrama de clases para el diseño de un software), el trabajo de cada uno es medido y comparado con el resto del grupo (desempeño de equipo), esto incentiva el espíritu de competencia de los individuos para querer mejorar su desempeño del resto del grupo. 
+
+Sin embargo, no existe una manera definitiva para proporcionar el desempeño de equipo, si esta representación fuera visual, tendrían que considerarse los factores de diseño de cada tipo de sistema colaborativo (p.ej. dimensiones de espacio, tiempo, cantidad de usuarios) y la forma como podrán interactuar o percibir esta información (awareness). 
+
+Parte de la percepción del desempeño se refiere a su interpretación, donde actualmente no hay certeza de que cada individuo interprete adecuadamente su desempeño, en algunas actividades grupales se requiere el uso de un coordinador (\textit{couch}) quien observa, explora el detalle de los datos de las actividades producidas por el equipo (p.ej. tiempo de ejecución, comunicación, cantidad de objetivos completados), evalúa el desempeño del equipo e informa a los participantes cómo pueden mejorar la ejecución de sus actividades. Este couch generalmente observa la interacción del equipo sin ejecutar directamente las actividades primordiales (p.ej. el entrenador de un partido de fútbol o el entrenador en e-sports competitivos). 
+ 
+En estudios previos, se ha definido que existen indicadores para determinar el desempeño de equipos de SC y su impacto positivo en la comunicación, coordinación e interacción de los equipos durante la ejecución de una actividad. Sin embargo, los trabajos existentes para presentar al usuario medidas de desempeño de equipos han contemplado de forma limitada el diseño de herramientas y uso de técnicas de VI, evidenciando que las técnicas tradicionales no profundizan en diversas medidas de desempeño individuales y de equipos que varían de acuerdo al momento, tamaño y contexto de aplicación de un SC. Por lo tanto, un uso inadecuado de las técnicas tradicionales de VI o un mal diseño de las mismas puede afectar negativamente su interpretación y comprensión, generando una carga cognitiva al usuario que dificulte la realización de su actividad y evitando el aprovechamiento de los indicadores de desempeño (p.ej. presencia social, entre otros) durante su interacción dentro de la actividad colaborativa. 
+
+Entonces, ¿Cómo representar el desempeño de equipos para diversos tipos de sistemas colaborativos?, ¿Hasta qué nivel de granularidad se podría el usuario explorar el indicador de desempeño?, ¿Por la exploración de datos, es necesaria una figura externa para la interpretación y coordinación del desempeño de equipos?
+
+\subsection{Objetivo General}
+Proponer un mecanismo de visualización de indicadores de desempeño en sistemas colaborativos, para proporcionar a los usuarios información que sea de utilidad para la toma de decisiones durante la ejecución de actividades colaborativas.
+
+
+
+\subsection{Objetivos Específicos}
+\begin{enumerate}
+	\item Identificar casos de estudio y sus escenarios de colaboración en los que se adquiere, detecta y evalúan indicadores de desempeño.
+	\item Exploración/experimentación exploratoria (sistemas construidos o en construcción) 
+	\item Proponer un modelo conceptual para la visualización de indicadores de desempeño de equipos.
+	\item Diseñar e implementar una arquitectura que soporte el modelo propuesto.
+	\item Validar experimentalmente el modelo propuesto.
+\end{enumerate}
+
+
+\subsection{Hipótesis}
+\begin{itemize}
+	\item H1 - La visualización de indicadores de desempeño de equipos propicia el incremento de los mismos durante la realización de las actividades colaborativas en un SC.	
+	
+\end{itemize}
+
+
+\subsection{Justificación}
+La definición de indicadores de desempeño y la confirmación de su impacto positivo en la ejecución de actividades dentro de un sistema colaborativo conllevan a la interrogante sobre la manera adecuada para proporcionar el dato a los usuarios de estos sistemas sin sobrecargar o distraer sus actividades de trabajo.
+
+Dependiendo del ámbito o categoría del sistema colaborativo es el nivel de sobrecarga visual y el nivel de concentración que requiere un individuo en la actividad que se encuentre ejecutando, pero también debe estar al tanto de las actividades del resto de los miembros del equipo para ejecutar adecuadamente su parte del trabajo. Es por esto que no se puede descartar del todo la presentación del desempeño del individuo dentro del grupo de trabajo, estimulando el espíritu de competencia y aportando valor a la toma de decisiones.
+
+El presente trabajo de investigación busca un modelo que permita la representación a un alto nivel de datos de desempeño, además de la presencia social, que facilite su interpretación evitando la carga cognitiva de los usuarios y considere el contexto de los usuarios de sistemas colaborativos. 
+

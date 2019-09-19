@@ -1,0 +1,371 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Mise en page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% pour les couples de quelque chose
+
+\newcommand{\lan}{\ensuremath{\langle\,}}
+\newcommand{\ran}{\ensuremath{\,\rangle}}
+
+% Retouche de l'environnement tabbing
+\makeatletter
+
+\def\@tabreset{\global\@nxttabmar\@firsttab\global\advance\@nxttabmar\@ne}
+\def\tabbing{\lineskip \z@\let\>\@rtab\let\<\@ltab\let\=\@settab
+     \let\+\@tabplus\let\-\@tabminus\let\'\@tabrj\let\0\@tabreset
+     \let\\=\@tabcr
+     \global\@hightab\@firsttab
+     \global\@nxttabmar\@firsttab
+     \dimen\@firsttab\@totalleftmargin
+     \global\@tabpush \global\@rjfieldfalse
+     \trivlist \item[]\if@minipage\else\vskip\parskip\fi
+     \setbox\@tabfbox\hbox{\rlap{\indent\hskip\@totalleftmargin
+      \the\everypar}}\def\@itemfudge{\box\@tabfbox}\@startline\ignorespaces}
+
+% définition de l'environnement langage : ne pas decaler le texte
+
+\newenvironment{lang}{\small \begin{tt}%
+\begin{tabbing}xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\+\kill}%
+{\end{tabbing}\end{tt}\ignorespaces}
+
+
+\newenvironment{langscript}{\scriptsize \begin{tt}%
+\begin{tabbing}xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\+\kill}%
+{\end{tabbing}\end{tt}\ignorespaces}
+
+% 
+%	commentaires cadrés a droite et normaux
+%
+\newlength{\comml}
+\def\commp#1{\@stopfield\@addfield\comml\linewidth
+\global\advance\comml -\wd\@curline
+\global\advance\comml -\dimen\@curtabmar
+\@startfield\parbox[t]{\comml}{\normalfont\it /* #1 */}}
+\newcommand{\comm}[1]{\normalfont\it /* #1 */}
+
+\newcommand{\prodi}{{\Large$\ast$}$_\cap$\xspace}
+\newcommand{\prode}{{\Large$\ast$}$_\cup$\xspace}
+\newcommand{\restif}{\ensuremath{\Gamma_{\text{si}}}\xspace}
+\newcommand{\restin}{\ensuremath{\Gamma_{\text{en}}}\xspace}
+\newcommand{\fleche}{\ensuremath{\rightarrow}\xspace}
+
+% environnements Definition, Algorithme, Requete, épigraphe
+% cambie al ingles los nombres
+
+\makeatother
+\newcounter{CptDefinition}
+\renewcommand{\theCptDefinition}{Definición \arabic{CptDefinition}}
+\newlength{\monparindent}
+\newenvironment{mydefinition}[1]{\setlength{\monparindent}{\parindent}%
+              \setlength{\parindent}{0pt}%
+              \refstepcounter{CptDefinition}%
+              \par\vspace{.3\baselineskip}\noindent{\bf
+                              \theCptDefinition} ({\bf #1})\\ \it}
+                              \\
+                              %{\\{\small $\square$}%                   		
+                              % \setlength{\parindent}{\monparindent}%
+                              % \vspace{.3\baselineskip}\par\ignorespaces}
+
+\newcounter{CptOperator}
+\renewcommand{\theCptOperator}{Función \arabic{CptOperator}}
+%\newlength{\monparindent}
+\newenvironment{operator}[1]{\setlength{\monparindent}{\parindent}%
+              \setlength{\parindent}{0pt}%
+              \refstepcounter{CptOperator}%
+              \par\vspace{.3\baselineskip}\noindent{\bf
+                              \theCptOperator} ({\bf #1})\\ \it}
+                              \\
+                              %{{\small $\square$}%
+                              % \setlength{\parindent}{\monparindent}%
+                              % \vspace{.3\baselineskip}\par\ignorespaces}
+
+
+
+\newcounter{CptAlgorithme}
+\renewcommand{\theCptAlgorithme}{Algorithm \arabic{CptAlgorithme}}
+\newenvironment{algorithme}[1]{\refstepcounter{CptAlgorithme}%
+                               \par\noindent{\bf \theCptAlgorithme}~: %
+                             {\em #1 \newline\ignorespaces}}%
+                           {\par\ignorespaces}
+
+\newcounter{CptRequete}
+\renewcommand{\theCptRequete}{Q\arabic{CptRequete}}
+\newcommand{\requete}[2]{\refstepcounter{CptRequete}%
+                               \par\noindent{\bf \theCptRequete}~: %
+
+\ifthenelse{\equal{#1}{}}{}{{\bf #1 \newline}}%
+{\em #2\par\vspace{-1mm}\ignorespaces}}
+
+\newcommand{\reqavecref}[3]{\par\noindent{\bf \ref{#1}}~: %
+\ifthenelse{\equal{#2}{}}{}{{\bf #2 \newline}}%
+{\em #3\par\vspace{-1mm}\ignorespaces}}
+
+\newcommand{\epigraphe}[2]{%
+\begin{flushright}%
+\begin{minipage}{0.35\textwidth}%
+%#1\par%
+
+\vspace{0.5\baselineskip}%
+\raggedleft{#2}%
+\par
+\end{minipage}%
+\end{flushright}%
+}
+
+% pour les fonctions d'expansion et d'approximation sur les granules:
+
+\newcommand{\expand}[1]{%
+\ensuremath{\text{\Large$\epsilon_{\text{\scriptsize #1}}$}}}
+\newcommand{\approxi}[1]{%
+\ensuremath{\text{\Large$\alpha_{\text{\scriptsize #1}}$}}}
+
+\newcommand{\la}[1]{\textsf{#1}}
+\newcommand{\sub}[2]{#1$_{\text{#2}}$}
+\newcommand{\lasub}[2]{\la{#1$_{\text{#2}}$}}
+\newcommand{\textul}[1]{\ensuremath{\underline{\text{#1}}}}
+
+\newcommand{\malambda}[2]{\ensuremath{\lambda}\mbox{#1 {\tiny $\bullet$}} #2}
+
+% mes environnements itemize
+
+\newenvironment{suite}{\begin{list}{$\bullet$}{%
+           \setlength{\itemsep}{\parsep}%
+           \setlength{\partopsep}{0pt}}}%
+           {\end{list}}
+\newenvironment{suite2}{\begin{list}{--}{%
+           \setlength{\itemsep}{0pt}%
+           \setlength{\parsep}{0pt}%
+           \setlength{\partopsep}{-1pt}}}%
+           {\end{list}}
+
+% mon environnement figure
+
+\newenvironment{figure-centree}{\begin{figure}[hbt] \begin{center}}%
+                               {\end{center}\end{figure}}
+
+% pour définir la sémantique de OQLiST
+
+\newcommand{\vv}[2]{\ensuremath{{[\![\,\text{#1}]\!]}\,_{%
+\ifthenelse{\equal{#2}{}}{\nu}{#2}}}}
+
+\newcommand{\semantique}[1]{%
+%\begin{center}%
+%\fbox{
+%\begin{minipage}{\textwidth}%
+%\vspace*{-4mm}%
+\begin{tabbing}%
+#1%
+\end{tabbing}
+%\vspace*{-4mm}
+%\end{minipage}%}
+%\vspace*{5mm}%
+%\end{center}%
+\par\ignorespaces}%
+\newcommand{\typage}[2]{
+\ensuremath{\displaystyle \text{Typage~: }%
+\frac{\mathrm{#1}}{\mathrm{#2}}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% pour eviter les orphelins
+%%%% debut macro %%%%
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+%%%% fin macro %%%%
+
+\newtheorem{predef}{Definition}
+\newtheorem{preexample}{Example}
+
+%\newenvironment{definition}[1]%
+%    {\begin{predef}[#1]\it}{\end{predef}}
+
+%\newenvironment{example}%
+%    {\begin{preexample}\it}{\end{preexample}}
+
+
+\newenvironment{mdexpr}%
+    {\begin{quote}}{\end{quote}}
+
+%%%%% mes figures %%%%%%%%%%%%
+
+\newcommand{\fig}[3]{
+\begin{figure}[hbt!]
+\vspace*{.2in}
+\centerline{\includegraphics[scale=#2]{figs/#1}}
+\caption{#3}
+\vspace*{.2in}
+\label{#1}
+\end{figure} }
+
+\newcommand{\figp}[3]{
+\begin{figure}[p]
+\vspace*{.2in}
+\centerline{\includegraphics[scale=#2]{figs/#1}}
+\caption{#3}
+\vspace*{.2in}
+\label{#1}
+\end{figure} }
+
+
+\newcommand{\figppt}[3]{
+\begin{figure}[hbt!]
+\vspace*{.2in}
+\centerline{\includegraphics[angle=-90,scale=#2]{figs/#1}}
+\caption{#3}
+\vspace*{.2in}
+\label{#1}
+\end{figure} }
+
+
+
+%%%%% mes commandes %%%%%%%%%%%%
+
+\newcommand{\dimtemps}{{\sl Temps} }
+
+\newcommand{\dimt}{{\sl Temps}}
+\newcommand{\njour}{{\sl jour} }
+\newcommand{\nj}{{\sl jour}}
+\newcommand{\pjourF}{{\sl jourFérié}}
+\newcommand{\pnomJ}{{\sl nomJour}}
+
+\newcommand{\nmois}{{\sl mois} }
+\newcommand{\nm}{{\sl mois}}
+
+\newcommand{\nannee}{{\sl année} }
+\newcommand{\nan}{{\sl année}}
+
+\newcommand{\dimmagasin}{{\sl Magasin} }
+\newcommand{\dimm}{{\sl Magasin}}
+
+\newcommand{\nville}{{\sl ville} }
+\newcommand{\nregion}{{\sl région} }
+\newcommand{\npays}{{\sl pays} }
+
+\newcommand{\nv}{{\sl ville}}
+\newcommand{\nr}{{\sl région}}
+\newcommand{\np}{{\sl pays}}
+
+\newcommand{\dimproduit}{{\sl Produit} }
+\newcommand{\dimp}{{\sl Produit}}
+
+\newcommand{\ncode}{{\sl code} }
+\newcommand{\nc}{{\sl code}}
+
+\newcommand{\propnom}{{\sl nom} }
+\newcommand{\pnom}{{\sl nom}}
+
+\newcommand{\propdesc}{{\sl description} }
+\newcommand{\pdesc}{{\sl description}}
+
+\newcommand{\ncategorie}{{\sl catégorie} }
+\newcommand{\ncat}{{\sl catégorie}}
+
+\newcommand{\nrayon}{{\sl rayon} }
+\newcommand{\nray}{{\sl rayon}}
+
+\newcommand{\nmarque}{{\sl marque} }
+
+\newcommand{\cubeventes}{{\sl Ventes} }
+\newcommand{\cubev}{{\sl Ventes}}
+
+\newcommand{\cubecv}{{\sl Cumul\_Ventes}}
+
+\newcommand{\mquantite}{{\sl quantité} }
+\newcommand{\mquant}{{\sl quantité}}
+
+\newcommand{\unitesvendues}{{\sl unités\_vendues} }
+\newcommand{\uvendues}{{\sl unités\_vendues}}
+
+
+\newcommand{\mprix}{{\sl prix} }
+\newcommand{\mpr}{{\sl prix}}
+
+\newcommand{\dimdist}{{\sl Distribution} }
+\newcommand{\dimd}{{\sl Distribution}}
+
+
+\newcommand{\ordre}{ $\prec$ }
+\newcommand{\ord}{\prec}
+
+\newcommand{\pordre}{ $\preceq^{*}$ }
+\newcommand{\pord}{\preceq^{*}}
+
+\newcommand{\toplevel}{$\top$ }
+\newcommand{\stoplevel}{$\top$}
+\newcommand{\topl}{\top}
+
+\newcommand{\bottomlevel}{$l_{\bot}$ }
+\newcommand{\botl}{l_\bot}
+
+\newcommand{\desc}{\rho}
+\newcommand{\descr}{ $\rho$ }
+
+\newcommand{\moins}{ \backslash }
+
+\newcommand{\flecheg}{\leftarrow}
+
+\newcommand{\infname}{XXX }
+\newcommand{\iname}{XXX}
+
+\newcommand{\comments}[1]{\centerline{#1}}
+
+
+\newcommand{\sm}{${\cal S}_m$}
+
+\newcommand{\si}{${\cal S}_i$}
+
+\newcommand{\sms}{${\cal S}_m$ }
+
+\newcommand{\sis}{${\cal S}_i$ }
+
+\newcommand{\nomops}{16 }
+\newcommand{\nomopsdim}{8 }
+\newcommand{\nomopscube}{8 }
+
+\newcommand{\st}{ \vert }
+
+
+
+\newcommand{\scatalogue}{{\tt scatalogue}}
+\newcommand{\spjaunes}{{\tt spjaunes}}
+\newcommand{\sgeog}{{\tt sgeog}}
+\newcommand{\sgrenoble}{{\tt sgrenoble}}
+\newcommand{\sparis}{{\tt sparis}}
+\newcommand{\slondres}{{\tt slondres}}
+
+\newcommand{\sscatalogue}{{\tt scatalogue} }
+\newcommand{\sspjaunes}{{\tt spjaunes} }
+\newcommand{\ssgeog}{{\tt sgeog} }
+\newcommand{\ssgrenoble}{{\tt sgrenoble} }
+\newcommand{\ssparis}{{\tt sparis} }
+\newcommand{\sslondres}{{\tt slondres} }
+
+
+\newcommand{\maps}{correspondances }
+\newcommand{\map}{correspondance }
+\newcommand{\Map}{Correspondance }
+
+
+\newcommand{\myrule}[3]{
+\begin{center}
+\begin{minipage}{\textwidth}
+%\vspace{-4mm}
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\+\kill
+\> Règle #1 : \\
+\vspace{5mm}
+\> \> \> #2 \\
+\> \> \> \> \> $\rightarrow$ #3
+\end{tabbing}
+%\vspace{-4mm}
+\end{minipage}
+\end{center}
+}
+
+
+

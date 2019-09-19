@@ -1,0 +1,53 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%   ARCHIVO PRINCIPAL DEL ANTEPROYECTO         %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,letterpaper,spanish]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8,latin1]{inputenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage{anysize}
+\usepackage[pdftex]{graphicx}
+\usepackage{pdfpages}
+
+\marginsize{3cm}{3cm}{2cm}{2cm}
+ % Set equal margins on book style
+%\setlength{\oddsidemargin}{30pt}
+%\setlength{\evensidemargin}{30pt}
+%\setlength{\marginparwidth}{30pt}
+%\setlength{\footskip}{30pt}
+\makeindex
+%\linespread{1.5}
+\graphicspath{{images/}}
+\include{macros}
+\begin{document}
+\title{Visualización de desempeño de equipos en sistemas colaborativos}
+
+\includepdf{portada.pdf}
+%\maketitle
+%\thispagestyle{electronic}
+%%\newpage
+%%M�rgenes
+\marginsize{2.5cm}{2.5cm}{3cm}{3cm}
+% Controla los m�rgenes {izquierda}{derecha}{arriba}{abajo}. 
+\tableofcontents
+\newpage
+%\listoftables
+%\listoffigures
+%\newpage
+
+%Para las pablabras cortadas
+\clubpenalty=10000
+\widowpenalty=10000
+
+%Nota: aquí podrías agregar sección de abreviaturas.
+
+\input{introduccion}
+\input{metodo}
+\input{resultados}
+\input{marcoteorico}
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{Anteproyecto}
+\end{document}
