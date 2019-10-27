@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8,latin1]{inputenc}
+\usepackage{graphicx}
+
+\graphicspath{{images/}}
+\title{Trabajando con figuras}
+\author{Luis G. Montané-Jiménez}
+
+\begin{document}
+\maketitle
+
+La Figura~\ref{fig:world} representa el planeta tierra. Por otro lado, el planeta marte está representado por la Figura~\ref{fig:mars}.
+
+	\begin{figure}[h]
+		\centerline{\includegraphics[height=2cm]{world.png}}
+		\caption{Planeta tierra}
+		\label{fig:world}
+	\end{figure}
+
+	\begin{figure}[h]
+		\centerline{\includegraphics[width=2cm]{mars.png}}
+		\caption{Planeta marte}
+		\label{fig:mars}
+	\end{figure}
+	
+\end{document}
