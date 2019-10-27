@@ -1,0 +1,161 @@
+%Presentación de ejemplo
+\documentclass{beamer}%
+\usepackage[spanish]{babel}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{ragged2e} %Para justificar texto
+\usepackage{natbib} %Para usar APA
+
+\mode<presentation>{
+	\usetheme{Frankfurt}%{Hannover} %{Warsaw} %tema
+	\usecolortheme{seahorse} %combinación de colores
+	\useoutertheme{miniframes}%{infolines}%{sidebar} %shadow} %encabezado y pie de página
+	\useinnertheme{rectangles} %Formato de los puntos
+}
+
+\graphicspath{{images/}}
+
+\begin{document}
+%Diapositiva inicial (Portada)
+\title{Estructura y propósito del artículo}
+\author{Luis Gerardo Montané Jiménez}
+\date{27 de octubre de 2019}
+\institute{UV-MSICU}
+\maketitle
+
+\setbeamertemplate{bibliography item}[text] %Usar números en las referencias
+
+\setbeamertemplate{footline}{ %Número de página
+	\raisebox{0.39cm}[0pt][0pt]{
+		\hspace{1cm}
+		\insertframenumber/\inserttotalframenumber
+	}
+} 
+
+% ----------------------------------------------------------------
+\section[Contenido]{}
+%Diapositiva de Contenido
+\begin{frame}
+  \frametitle{Contenido}
+	\tableofcontents
+\end{frame}
+
+\section{Título:La cara de tu artículo}
+%Diapositiva 1
+\begin{frame}
+	\frametitle{Introducción}
+	\justifying
+		Al no existir reglas específicas para los actores que se encuentran dentro de una red de telefonía, se propone     		implementar el monitor de regulación en una red de dispositivos móviles.
+\end{frame}
+
+\section{Fase de Análisis}
+
+\subsection{Análisis}
+%Diapositiva 2
+\begin{frame}
+	\frametitle{Problemática}
+		\justifying
+		No existen reglas específicas para los actores que se encuentran dentro de una red de telefonía.
+\end{frame}
+
+\subsection{Estado del arte}
+
+%Diapositiva 3
+\begin{frame}
+	\frametitle{Estado del arte (1/2)}
+Los sistemas de inhibición celular fueron desarrolladox por tecnologías militares con el fin de anular las comunicaciones del enemigo, pero luego esta tecnología se utiliza en organismos Gubernamentales y hoy en día se extiende hasta el ámbito civil.
+
+Un inhibidor de celulares, utiliza una moderna técnica de proceso de señal para interferir la conexión entre los celulares y la torre celular con la cual se esta comunicando en forma continua. 
+\end{frame}
+
+\subsection{Estado del arte}
+%Diapositiva 4
+\begin{frame}
+	\frametitle{Estado del arte (2/2)}
+
+Trabaja emitiendo ondas de Radio Frecuencia en baja potencia, que bloquean las comunicaciones celulares en diferentes rangos dependiendo la potencia del bloqueador celular y la ubicación geográfica dentro de la red celular. Todas las llamadas entrantes ingresarán directamente al contestador como si el celular se encontrara en un área fuera de cobertura \citep{Rosenthal1989}.
+
+\end{frame}
+
+\subsection{Objetivo}
+%Diapositiva 5
+\begin{frame}
+	\frametitle{Objetivo}
+	\begin{block}{}
+		Implementar el monitor de regulación en una red de dispositivos móviles.
+	\end{block}{}
+\end{frame}
+
+\section{Fase de Hipótesis}
+\subsection{Mecanismo}
+%Diapositiva 6
+\begin{frame}
+	\frametitle{Mecanismo de solución}
+	\begin{columns}[c]	
+	\column{2in}
+	\begin{block}{}
+		%Crear viñetas
+		\begin{itemize}
+			\item	Crear especificación del monitor.\\
+			\item Definir las reglas para la red de telefonía. \\
+			\item Ejecutar e interpretar reglas.\\
+		\end{itemize}
+	\end{block}
+	\column{2in}		
+		\begin{figure}[h]
+		\centering		
+		\includegraphics[scale=.2]{mars.png} %,natwidth=4px, natheight=1px
+		\begin{center}
+			\caption{Planeta}
+		\end{center}
+		\label{fig:cellphone}
+\end{figure}
+		
+	\end{columns}
+\end{frame}
+
+\subsection{Meta}
+%Diapositiva 7
+\begin{frame}
+	\frametitle{Meta}
+	\begin{block}{}
+		Crear una red de telefonía móvil regulada por otros actores.
+	\end{block}
+\end{frame}
+
+\subsection{Hipótesis}
+%Diapositiva 8
+\begin{frame}
+	\frametitle{Hipótesis}
+	\begin{block}{Objetivo de la hipótesis}
+	El monitor permite regular y controlar los dispositivos móviles de los actores que se encuentran en  una red de telefonía.
+	\end{block}
+\end{frame}
+
+\section{Fase de síntesis}
+%Diapositiva 9
+\begin{frame}
+	\frametitle{Implementación de la solución}
+	\begin{block}{}
+	Desarrollo del prototipo con metodologías agiles. Implementar el monitor de regulación con  la plataforma Java como lenguaje de programación. 
+	\end{block}
+\end{frame}
+
+\section{Fase de validación}
+%Diapositiva 10
+\begin{frame}
+	\frametitle{Conclusiones}
+	\begin{alertblock}{Discusión final}
+	La regulación fue implementada en una red de telefonía, se hicieron pruebas en un ambiente real con la instalación del prototipo.	
+  \end{alertblock}{}
+\end{frame}
+
+%Diapositiva 11
+\begin{frame}
+	\frametitle{Referencias}
+	\nocite{Rosenthal1989,Lintern2003a}
+  \bibliographystyle{apalike}%{plain} Usando APA
+  \bibliography{biblio}
+\end{frame}
+
+\end{document}
