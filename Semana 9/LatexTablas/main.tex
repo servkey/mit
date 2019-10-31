@@ -3,9 +3,6 @@
 \usepackage[utf8,latin1]{inputenc}
 \usepackage{graphicx}
 
-\renewcommand{\listtablename}{Índice de tablas}
-\renewcommand{\tablename}{Tabla}
-
 
 \graphicspath{{images/}}
 \title{Trabajando con figuras}
@@ -13,6 +10,15 @@
 
 \begin{document}
 \maketitle
+%Cambiar cuadro por tabla
+\renewcommand{\tablename}{Tabla}
+\renewcommand{\listtablename}{Índice de tablas}
+%Generar índice de tablas
+\listoftables
+%Generar índice de figuras
+\listoffigures
+\newpage
+
 
 La Figura~\ref{fig:world} representa el planeta tierra. Por otro lado, el planeta marte está representado por la Figura~\ref{fig:mars}. La Tabla~\ref{tab:planetas} resume características de ambos planetas.
 
