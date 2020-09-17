@@ -10,14 +10,14 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=566
-NormalPos.bottom=321
+NormalPos.top=53
+NormalPos.right=2966
+NormalPos.bottom=795
 Class=LaTeXView
 Document=marcoteorico.tex
 
 [Frame0_View0,0]
-TopLine=31
+TopLine=0
 Cursor=870
 
 [Frame1]
@@ -28,15 +28,15 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=566
-NormalPos.bottom=321
+NormalPos.top=53
+NormalPos.right=2966
+NormalPos.bottom=795
 Class=LaTeXView
 Document=introduccion.tex
 
 [Frame1_View0,0]
-TopLine=104
-Cursor=2447
+TopLine=42
+Cursor=4314
 
 [Frame2]
 Flags=0
@@ -46,9 +46,9 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=566
-NormalPos.bottom=321
+NormalPos.top=53
+NormalPos.right=2966
+NormalPos.bottom=795
 Class=LaTeXView
 Document=resultados.tex
 
@@ -64,14 +64,14 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=566
-NormalPos.bottom=321
+NormalPos.top=53
+NormalPos.right=2966
+NormalPos.bottom=795
 Class=LaTeXView
 Document=metodo.tex
 
 [Frame3_View0,0]
-TopLine=134
+TopLine=48
 Cursor=3397
 
 [Frame4]
@@ -82,15 +82,15 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=566
-NormalPos.bottom=321
+NormalPos.top=53
+NormalPos.right=2966
+NormalPos.bottom=795
 Class=LaTeXView
 Document=main.tex
 
 [Frame4_View0,0]
-TopLine=0
-Cursor=168
+TopLine=31
+Cursor=319
 
 [Frame5]
 Flags=0
@@ -100,9 +100,9 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=566
-NormalPos.bottom=321
+NormalPos.top=53
+NormalPos.right=2966
+NormalPos.bottom=795
 Class=LaTeXView
 Document=macros.tex
 
@@ -112,5 +112,5 @@ Cursor=0
 
 [SessionInfo]
 FrameCount=6
-ActiveFrame=0
+ActiveFrame=1
 

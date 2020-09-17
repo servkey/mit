@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%   ARCHIVO PRINCIPAL DEL ANTEPROYECTO         %%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[12pt,letterpaper,spanish]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8,latin1]{inputenc}
@@ -8,6 +8,11 @@
 \usepackage{anysize}
 \usepackage[pdftex]{graphicx}
 \usepackage{pdfpages}
+
+%Para usar APA
+\usepackage{natbib}
+\usepackage{apalike}
+
 \marginsize{3cm}{3cm}{2cm}{2cm}
  % Set equal margins on book style
 %\setlength{\oddsidemargin}{30pt}
@@ -41,6 +46,7 @@
 \input{resultados}
 \input{marcoteorico}
 \newpage
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
+\bibliographystyle{apalike}
 \bibliography{Anteproyecto}
 \end{document}
